@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cesium OSM Globe</title>
+
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.111/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.111/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+            /* 🔹 Tiled background added here */
+            background-image: url('https://bettysgraphics.neocities.org/images/backgrounds/stars%204.gif');
+            background-repeat: repeat;
+        }
+
+        /* Header at the top */
+        #headerText {
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            background-color: WHITE;
+            color: rgb(255, 0, 0); 
+            position: absolute;
+            top: 0%;
+            padding: 2%;
+            z-index: 10; 
+        }
+
+        /* Clues / prompts banner */
+        #countryChallenge {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: WHITE;
+            color: rgb(0, 0, 0);
+            padding: 1%;
+            position: absolute;
+            top: 6%;
+            z-index: 10;
+        }
+
+        /* Cesium globe container */
+        #cesiumContainer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 90%; 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="headerText">Guess The Country!</div>
+
+    <!-- Game clue banner -->
+    <div id="countryChallenge">Loading clue...</div>
+
+    <!-- Cesium globe -->
+    <div id="cesiumContainer"></div>
+
+    <!-- Your JS -->
+    <script src="main.js"></script>
+</body>
+</html>
